@@ -24,7 +24,7 @@ function delete_excess_cells(sheet_name){
 
         // Check that there are excess cells. 
         if (sheet.getMaxRows() > sheet.getLastRow()+1){
-            sheet.deleteRows(sheet.getLastRow()+1, sheet.getMaxRows()-sheet.getLastRow()-1);
+            sheet.deleteRows(sheet.getLastRow()+1, sheet.getMaxRows()-sheet.getLastRow());
             log_change(sheet.getName(), 'Remove excess rows', 'Excess rows were removed.');
         }
 
